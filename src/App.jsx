@@ -84,30 +84,35 @@ function App() {
         </h3>
 
         {/* APP DESCRIPTION */}
-        <p
-          style={{
-            color: "#cbd5e1",
-            fontSize: "17px",
-            marginBottom: "20px",
-          }}
-        >
-          Bhakti, Aarti & Spiritual Experience
-        </p>
+       <p
+  style={{
+    color: "#cbd5e1",
+    fontSize: "17px",
+    marginBottom: "20px",
+    lineHeight: "28px",
+  }}
+>
+  Digital Mandir is a devotional mobile application where users can
+  explore gods, view divine images, and listen to devotional aartis
+  anytime.
+</p>
 
         {/* DOWNLOAD BUTTON */}
-        <button
-          style={{
-            padding: "12px 25px",
-            border: "none",
-            borderRadius: "10px",
-            backgroundColor: "#3b82f6",
-            color: "white",
-            fontSize: "16px",
-            cursor: "pointer",
-          }}
-        >
-          Download APK
-        </button>
+        <a href="/digitalmandir.apk" download>
+  <button
+    style={{
+      padding: "12px 25px",
+      border: "none",
+      borderRadius: "10px",
+      backgroundColor: "#3b82f6",
+      color: "white",
+      fontSize: "16px",
+      cursor: "pointer",
+    }}
+  >
+    Download APK
+  </button>
+</a>
       </div>
 
       {/* FOOTER */}
