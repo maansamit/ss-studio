@@ -137,10 +137,7 @@ function App() {
         </p>
 
         {/* DOWNLOAD BUTTON */}
-        <a
-          href="https://drive.google.com/file/d/1c60qzG-NDO6ilDgvVc9Lp8CyBqhlWZkU/view?usp=sharing"
-          target="_blank"
-        >
+<a href="digital_mandir.apk" download>Download App🚩</a>
           <button
             style={{
               padding: "12px 25px",
