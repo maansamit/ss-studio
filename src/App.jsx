@@ -275,7 +275,22 @@ function App() {
             ✉️ tinnu.maan@gmail.com
           </a>
         </div>
-
+{/* Footer ke andar Copyright se pehle ye add karein */}
+<div style={{ marginBottom: "15px" }}>
+  <a 
+    href="/privacy-policy.html" 
+    style={{ color: "#64748b", fontSize: "13px", textDecoration: "underline", margin: "0 10px" }}
+  >
+    Privacy Policy
+  </a>
+  <span style={{ color: "#64748b" }}>|</span>
+  <a 
+    href="/terms-conditions.html" 
+    style={{ color: "#64748b", fontSize: "13px", textDecoration: "underline", margin: "0 10px" }}
+  >
+    Terms & Conditions
+  </a>
+</div>
         {/* COPYRIGHT LINE */}
         <p style={{ color: "#64748b", fontSize: "13px", borderTop: "1px solid rgba(255,255,255,0.02)", paddingTop: "20px" }}>
           © 2026 SS Studio. Built with total architectural security. All Rights Reserved.
