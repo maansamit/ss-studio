@@ -164,7 +164,7 @@ function App() {
                 }}
               />
               <div style={{ position: "absolute", top: "12px", right: "12px", backgroundColor: "rgba(11, 15, 25, 0.85)", backdropFilter: "blur(6px)", padding: "4px 10px", borderRadius: "20px", border: "1px solid rgba(255,255,255,0.1)", fontSize: "11px", color: "#fb923c", fontWeight: "bold" }}>
-                v2.0 Live
+                v1.0 Live
               </div>
             </div>
 
