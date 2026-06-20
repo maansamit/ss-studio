@@ -1,6 +1,7 @@
+import PaymentPage from './pages/PaymentPage'; // Ensure this file exists
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import PaymentPage from './pages/PaymentPage'; // Ensure this file exists
+
 
 function App() {
   return (
