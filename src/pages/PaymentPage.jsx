@@ -1,46 +1,43 @@
 import React, { useState } from 'react';
-import { db } from '../firebaseConfig'; // Aapka firebase config file path
-import { collection, addDoc } from 'firebase/firestore'; 
 
 const PaymentPage = () => {
   const [email, setEmail] = useState('');
   const [utr, setUtr] = useState('');
-  const [plan, setPlan] = useState('Monthly'); // Default plan
+  const [plan, setPlan] = useState('Monthly');
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    try {
-      // Firebase mein "pending_payments" collection mein data save ho raha hai
-      await addDoc(collection(db, "pending_payments"), {
-        email: email,
-        utr: utr,
-        plan: plan,
-        status: 'pending',
-        timestamp: new Date()
-      });
-      alert("Details submitted! We will verify within 2 hours.");
-    } catch (error) {
-      alert("Error saving data: " + error.message);
-    }
+    // यहाँ अभी के लिए सिर्फ एक Alert है
+    alert(`Thank you! Your payment details for ${plan} plan have been received. We will contact you soon.`);
+    setEmail('');
+    setUtr('');
   };
 
   return (
-    <div style={{ padding: '20px', maxWidth: '400px', margin: 'auto', textAlign: 'center' }}>
+    <div style={{ padding: '20px', maxWidth: '400px', margin: 'auto', textAlign: 'center', color: '#f8fafc', fontFamily: 'sans-serif' }}>
       <h1>Premium Subscription</h1>
       
-      {/* Plan Selection */}
-      <select onChange={(e) => setPlan(e.target.value)} style={{marginBottom: '10px'}}>
+      <select onChange={(e) => setPlan(e.target.value)} style={{marginBottom: '15px', padding: '10px', width: '100%'}}>
         <option value="Monthly">Monthly - ₹10</option>
         <option value="Yearly">Yearly - ₹100</option>
       </select>
 
-      {/* QR Code */}
-      <img src="/qr.png" alt="Payment QR" style={{ width: '250px', display: 'block', margin: 'auto' }} />
+      <img src="/qr.png" alt="Payment QR" style={{ width: '250px', display: 'block', margin: 'auto', marginBottom: '20px' }} />
 
-      <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '15px', marginTop: '20px' }}>
-        <input type="email" placeholder="Enter App Email ID" required value={email} onChange={(e) => setEmail(e.target.value)} />
-        <input type="text" placeholder="Enter UTR Number" required value={utr} onChange={(e) => setUtr(e.target.value)} />
-        <button type="submit" style={{ padding: '10px', background: '#0b0f19', color: 'white', border: 'none' }}>Submit Details</button>
+      <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '15px' }}>
+        <input 
+          type="email" placeholder="Enter your App Email ID" required 
+          value={email} onChange={(e) => setEmail(e.target.value)}
+          style={{ padding: '10px' }}
+        />
+        <input 
+          type="text" placeholder="Enter UTR/Transaction Number" required 
+          value={utr} onChange={(e) => setUtr(e.target.value)}
+          style={{ padding: '10px' }}
+        />
+        <button type="submit" style={{ padding: '12px', background: '#fb923c', color: 'white', border: 'none', borderRadius: '8px', cursor: 'pointer' }}>
+          Submit Payment Details
+        </button>
       </form>
     </div>
   );
