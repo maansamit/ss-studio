@@ -30,7 +30,7 @@ const AppContent = () => {
       <main style={{ maxWidth: "1000px", margin: "0 auto", padding: "60px 20px" }}>
         {/* Profile Section */}
         <div style={{ textAlign: "center", marginBottom: "60px" }}>
-           <img src="/profile.png" style={{ width: "110px", borderRadius: "50%", border: "3px solid #3b82f6" }} />
+           <img src="/profile.png" style={{ width: "110px", borderRadius: "50%", border: "3px solid #e5e8ec" }} />
            <h2 style={{ fontSize: "24px" }}>Samit Singh</h2>
            <p style={{ color: "#94a3b8" }}>SOFTWARE & APP DEVELOPER</p>
         </div>
